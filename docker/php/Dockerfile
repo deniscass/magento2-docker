@@ -49,7 +49,7 @@ RUN echo "memory_limit = 4G" > /usr/local/etc/php/conf.d/memory-limit.ini
 RUN echo "max_execution_time = 1800" > /usr/local/etc/php/conf.d/max-execution-time.ini
 RUN echo "opcache.enable = 1" > /usr/local/etc/php/conf.d/opcache.ini
 RUN echo "opcache.save_comments = 1" > /usr/local/etc/php/conf.d/opcache.ini
-RUN echo "upload_max_filesize = 1024M" > /usr/local/etc/php/conf.d/upload-max-size.ini
+RUN echo "upload_max_filesize = 20M" > /usr/local/etc/php/conf.d/upload-max-size.ini
 
 # Enable Xdebug
 #RUN pecl install xdebug && docker-php-ext-enable xdebug \
