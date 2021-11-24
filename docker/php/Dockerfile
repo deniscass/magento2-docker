@@ -39,6 +39,15 @@ RUN mkdir -p /tmp/blackfire \
     && mv /tmp/blackfire/blackfire /usr/bin/blackfire \
     && rm -Rf /tmp/blackfire
 
+#grunt basic setup install
+RUN apt-get update \
+    && apt-get install -y \
+    curl \
+    gnupg \
+    && curl -sL https://deb.nodesource.com/setup_16.x | bash - \
+    && apt-get install -y nodejs \
+    && npm install -g grunt-cli
+
 # Configuring php.ini
 RUN apt-get install -y vim \
     && cd /usr/local/etc/php \
